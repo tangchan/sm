@@ -1,0 +1,17 @@
+#play {
+	position: absolute;
+	top:70%;
+	left:15%;
+}
+
+#bye {
+	position: absolute;
+	top:70%;
+	left:15%;
+	color:#fff;
+	background:#000;
+	border:2px solid #fff;
+	position:absolute;
+	padding:10px;
+	text-align:center;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Pic08</title>
+<link href="lay.css" rel="stylesheet" type="text/css" />
+
+<!-- Call Jquery -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<!-- Clicking in image map areas -->
+<script type="text/javascript">
+$(document).ready(function() {
+    // When clicked, show difference
+	$('#transparentmap AREA').click(function() { 
+	var theDifference = '#'+$(this).attr('id')+'-diff';
+	$(theDifference).css('display', 'inline');
+    $(theDifference).data('clicked', true);
+	
+	// When all differences selected/clicked, show email submission form
+	if($('#leaf-diff').data('clicked') && $('#petal-diff').data('clicked') && $('#light-diff').data('clicked') && $('#nolight-diff').data('clicked') && $('#sauce-diff').data('clicked')) {
+		$('#form_container').css('display', 'inline');
+	}
+	
+	});
+});
+
+function delayedRedirect(){
+    $('#lose').css('display', 'inline');
+    $('#timesup').css('display', 'inline');
+}
+
+function next(){
+	window.location="http://google.com";
+}
+
+</script>
+
+</head>
+<body onLoad="setTimeout('delayedRedirect()', 60000)">
+<div id="wrapper">
+
+<img id="different" src="pic/pic08/pic08_W.jpg">
+
+<div id="transparentmap">
+		<img class="transparentmap" src="pic/pic08/pic08-0.png" usemap="#photohunt" />
+		<map name="photohunt">
+			<area id="leaf" shape ="rect" coords="127,143,230,199" />
+			<area id="light" shape ="rect" coords="333,200,683,239" />
+			<area id="nolight" shape ="rect" coords="447,230,480,258" />
+			<area id="sauce" shape ="rect" coords="194,219,227,264" />
+			<area id="petal" shape ="rect" coords="388,152,418,184" />
+		</map>
+	</div><!-- end transparent map -->
+		
+		<img id="leaf-diff" src="pic/pic08/pic08-1.png">
+		<img id="light-diff" src="pic/pic08/pic08-2.png">
+		<img id="nolight-diff" src="pic/pic08/pic08-3.png">
+		<img id="sauce-diff"src="pic/pic08/pic08-4.png">
+		<img id="petal-diff" src="pic/pic08/pic08-5.png">
+	
+	<div id="original">
+		<!--<p>123456789</p><br /> -->
+		<img src="pic/pic08/pic08.jpg">
+	</div><!-- end original -->
+	
+	<form method="post" action="sendEmail.php">
+
+
+<div id="form_container">
+	<h1>Awesome!</br>
+	<input type="button" value="Next one" onclick="next()">
+	</h1>
+	<!--
+	Submit your email address to be entered to win.<br />
+		<p><small>Email Address:</small> <input type="text" name="email" id="email" /></p>
+		<br /><p><input type="submit" name="submit" id="submit" value="Submit" /></p>
+		<ul id="response" />-->
+		
+	</div><!--end main -->
+	</div><!-- end form container -->
+
+	<div id="lose">
+	<img src="pic/pic08/pic08_A.jpg">
+	</div>
+
+	<div id="timesup">
+	<h1>Times up!!
+	<br><input type="button" value="Next one" onclick="next()"></h1>
+	</div>
+</form>
+</div></div><!-- end pagebg and main -->
+</body>
+</html>
