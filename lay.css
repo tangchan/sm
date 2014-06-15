@@ -1,0 +1,107 @@
+img {
+	max-width:592px;
+	height:inherit;
+	width:expression(document.body.clientWidth>592?"592px""auto");/*若圖片大於550px就調整*/
+	overflow:hidden;      /*超過不顯示*/
+	
+}
+#different {
+	left:600px;
+	top:0px;
+	z-index:0;
+	position: absolute;
+}
+#leaf-diff {
+	position:absolute;
+	left:600px;
+	top:0px;
+	z-index:1;
+	display: none;
+}
+#light-diff {
+	position:absolute;
+	left:600px;
+	top:0px;
+	display:none;
+	z-index:1;
+}
+#nolight-diff {
+	position:absolute;
+	left:600px;
+	top:0px;
+	display:none;
+	z-index:1;
+}
+#sauce-diff {
+	position:absolute;
+	left:600px;
+	top:0px;
+	display:none;
+	z-index:1;
+}
+#petal-diff {
+	position:absolute;
+	left:600px;
+	top:0px;
+	display:none;
+	z-index:1;
+}
+#transparentmap {
+	z-index:9999;
+	position: absolute;
+	left:600px;
+	top:0px;
+
+}
+#form_container {
+	display:none;
+	color:#fff;
+	background:#000;
+	border:2px solid #fff;
+	position:absolute;
+	top:380px;
+	left:500px;
+	z-index:9999999;
+	padding:10px;
+	text-align:center;
+}
+#lose {
+	display:none;
+	color:#fff;
+	background:#000;
+	position:relative;
+	top:0px;
+	left:600px;
+	z-index:9999999;
+	text-align:center;
+}
+#timesup {
+	display:none;
+	color:#fff;
+	background:#000;
+	border:2px solid #fff;
+	position:absolute;
+	top:380px;
+	left:500px;
+	z-index:9999999;
+	padding:10px;
+	text-align:center;
+}
+a:link {text-decoration: none;}
+a:visited {text-decoration: none;}
+a:hover {text-decoration: underline;}
+a:active {text-decoration: none;}
+body {
+	color:#000;
+	font-family:helvetica, arial, sans-serif;
+	top: 1000px;
+}
+#original {
+	position: absolute;
+}
+#wrapper {
+	width:930px; 
+	padding:0px 0px 0px 0px; 
+	margin:0px auto;
+	position:absolute;
+}
